@@ -1,0 +1,6 @@
+framework module Pods_BlogExercise {
+  umbrella header "Pods-BlogExercise-umbrella.h"
+
+  export *
+  module * { export * }
+}

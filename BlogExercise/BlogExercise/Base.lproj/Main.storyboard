@@ -16,38 +16,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xbI-4z-dsX">
-                                <rect key="frame" x="10" y="164" width="394" height="688"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f22-nb-UID" userLabel="BackgroundView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="X8w-UG-YbB">
-                                        <rect key="frame" x="0.0" y="5" width="394" height="683"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </tableView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mappleLeaf.png" translatesAutoresizingMaskIntoConstraints="NO" id="SlC-Gv-xOi">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="74O-9M-ulb"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="havasLogoWhite.png" translatesAutoresizingMaskIntoConstraints="NO" id="SN6-TK-j91">
+                                        <rect key="frame" x="63" y="0.0" width="288" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="fen-h4-9rs"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xbI-4z-dsX" userLabel="MainView">
+                                        <rect key="frame" x="2" y="120" width="410" height="695"/>
+                                        <subviews>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="X8w-UG-YbB">
+                                                <rect key="frame" x="0.0" y="7" width="410" height="688"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </tableView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.99678093189999994" green="0.0032870359719999998" blue="0.0019452283160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="X8w-UG-YbB" secondAttribute="trailing" id="UKw-QQ-QYg"/>
+                                            <constraint firstAttribute="bottom" secondItem="X8w-UG-YbB" secondAttribute="bottom" id="Ue5-8p-CmT"/>
+                                            <constraint firstItem="X8w-UG-YbB" firstAttribute="leading" secondItem="xbI-4z-dsX" secondAttribute="leading" id="f4e-EE-F16"/>
+                                            <constraint firstItem="X8w-UG-YbB" firstAttribute="top" secondItem="xbI-4z-dsX" secondAttribute="top" constant="7" id="nvq-eL-7MC"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.99678093189999994" green="0.0032870359719999998" blue="0.0019452283160000001" alpha="0.1420461894660596" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="X8w-UG-YbB" firstAttribute="top" secondItem="xbI-4z-dsX" secondAttribute="top" constant="5" id="bKb-Nb-Eig"/>
-                                    <constraint firstAttribute="trailing" secondItem="X8w-UG-YbB" secondAttribute="trailing" id="l3l-cU-ICS"/>
-                                    <constraint firstItem="X8w-UG-YbB" firstAttribute="leading" secondItem="xbI-4z-dsX" secondAttribute="leading" id="pFf-Tq-mNl"/>
-                                    <constraint firstAttribute="bottom" secondItem="X8w-UG-YbB" secondAttribute="bottom" id="uk6-Ze-YKI"/>
+                                    <constraint firstAttribute="trailing" secondItem="SlC-Gv-xOi" secondAttribute="trailing" id="9EO-ut-yxW"/>
+                                    <constraint firstItem="SN6-TK-j91" firstAttribute="top" secondItem="f22-nb-UID" secondAttribute="top" id="D6m-rL-C7R"/>
+                                    <constraint firstItem="SlC-Gv-xOi" firstAttribute="leading" secondItem="f22-nb-UID" secondAttribute="leading" id="GmO-1w-mdW"/>
+                                    <constraint firstItem="SlC-Gv-xOi" firstAttribute="top" secondItem="SN6-TK-j91" secondAttribute="top" id="MFp-dP-vxI"/>
+                                    <constraint firstItem="xbI-4z-dsX" firstAttribute="leading" secondItem="f22-nb-UID" secondAttribute="leading" constant="2" id="WBU-9b-Q9k"/>
+                                    <constraint firstItem="SN6-TK-j91" firstAttribute="centerX" secondItem="f22-nb-UID" secondAttribute="centerX" id="YeP-lm-fu7"/>
+                                    <constraint firstAttribute="trailing" secondItem="xbI-4z-dsX" secondAttribute="trailing" constant="2" id="ghR-0k-oOf"/>
+                                    <constraint firstAttribute="bottom" secondItem="xbI-4z-dsX" secondAttribute="bottom" constant="3" id="nYH-rU-iza"/>
+                                    <constraint firstItem="xbI-4z-dsX" firstAttribute="top" secondItem="SN6-TK-j91" secondAttribute="bottom" id="og8-JG-292"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="havasLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="SN6-TK-j91">
-                                <rect key="frame" x="-49" y="44" width="512" height="120"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="fen-h4-9rs"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="SN6-TK-j91" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Xx5-o1-rcR"/>
-                            <constraint firstItem="xbI-4z-dsX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="YaT-U0-S5w"/>
-                            <constraint firstItem="SN6-TK-j91" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="emX-Fg-Jgq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xbI-4z-dsX" secondAttribute="trailing" constant="10" id="ogo-g1-sLv"/>
-                            <constraint firstItem="xbI-4z-dsX" firstAttribute="top" secondItem="SN6-TK-j91" secondAttribute="bottom" id="sjf-4P-M6d"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xbI-4z-dsX" secondAttribute="bottom" constant="10" id="uL3-ar-bZD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="f22-nb-UID" secondAttribute="bottom" id="7BO-al-mf1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f22-nb-UID" secondAttribute="trailing" id="TFt-HG-8gP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="f22-nb-UID" secondAttribute="leading" id="TIu-0C-rfY"/>
+                            <constraint firstItem="f22-nb-UID" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="VXh-Ia-u2S"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -57,7 +78,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="havasLogo.png" width="512" height="381"/>
+        <image name="havasLogoWhite.png" width="288" height="288"/>
+        <image name="mappleLeaf.png" width="288" height="288"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
