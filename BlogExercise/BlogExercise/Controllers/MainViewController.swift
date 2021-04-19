@@ -93,8 +93,9 @@ class MainViewController: UIViewController {
         }
         return RedditBlog.init(kind: "", data: nil);
     }
-
+   
 }
+
 
 //*****************************************************************
 // MARK: - TableViewDelegate
@@ -104,9 +105,31 @@ extension MainViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-    print("Selected")
-        }
+        print("clicked!")
+       // let blogVC = BlogDetailViewController()
+        let blog = self.blogList[indexPath.row].data
+        
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let blogVC = storyBoard.instantiateViewController(withIdentifier: "BlogDetails") as! BlogDetailViewController
+        
+        blogVC.blogData = BlogDetailsData.init(ups: String(blog?.ups ?? 0) , votes: String(blog?.numComments ?? 0), thumbnail: blog?.thumbnail, title: blog?.title,details: blog?.author)
+        
+        self.present(blogVC, animated: true, completion: nil)
+       
+        //    navigationController?.pushViewController(blogVC, animated: true)
+        
+//present(blogVC, animated: true, completion: nil)
+        
+//        
+//  
+//        
+        
+       
+   }
 }
+    
+
 
 
 //*****************************************************************
@@ -153,36 +176,7 @@ extension MainViewController: UITableViewDataSource {
     }
     
     
-    
-    //    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    //
-    //        if searchController.isActive {
-    //            return searchedStations.count
-    //        } else {
-    //            return stations.isEmpty ? 1 : stations.count
-    //        }
-    //    }
-    
-    //    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    //
-    //        if stations.isEmpty {
-    //            let cell = tableView.dequeueReusableCell(withIdentifier: "NothingFound", for: indexPath)
-    //            cell.backgroundColor = .clear
-    //            cell.selectionStyle = .none
-    //            return cell
-    //
-    //        } else {
-    //            let cell = tableView.dequeueReusableCell(withIdentifier: "StationCell", for: indexPath) as! StationTableViewCell
-    //
-    //            // alternate background color
-    //            cell.backgroundColor = (indexPath.row % 2 == 0) ? UIColor.clear : UIColor.black.withAlphaComponent(0.2)
-    //
-    //            let station = searchController.isActive ? searchedStations[indexPath.row] : stations[indexPath.row]
-    //            cell.configureStationCell(station: station)
-    //
-    //            return cell
-    //        }
-    //    }
+
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
         var lastInitialDisplayableCell = false
@@ -210,5 +204,7 @@ extension MainViewController: UITableViewDataSource {
         }
     }
 }
+
+
 
 

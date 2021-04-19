@@ -8,6 +8,66 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Details-->
+        <scene sceneID="2Gu-iF-g78">
+            <objects>
+                <viewController storyboardIdentifier="BlogDetails" title="Details" useStoryboardIdentifierAsRestorationIdentifier="YES" id="djC-4F-uPT" customClass="BlogDetailViewController" customModule="BlogExercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z23-bS-Rdx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k7d-sq-qVM">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhv-Qo-3Sc">
+                                        <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3S-QE-aeJ">
+                                        <rect key="frame" x="50" y="50" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lo5-A5-3F9">
+                                        <rect key="frame" x="158" y="392" width="97" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstItem="o3S-QE-aeJ" firstAttribute="leading" secondItem="k7d-sq-qVM" secondAttribute="leading" constant="50" id="7f5-2Y-AEi"/>
+                                    <constraint firstItem="lo5-A5-3F9" firstAttribute="centerX" secondItem="k7d-sq-qVM" secondAttribute="centerX" id="FyL-Jo-Ai6"/>
+                                    <constraint firstItem="o3S-QE-aeJ" firstAttribute="top" secondItem="k7d-sq-qVM" secondAttribute="top" constant="50" id="S3W-Ay-4E9"/>
+                                    <constraint firstItem="bhv-Qo-3Sc" firstAttribute="leading" secondItem="k7d-sq-qVM" secondAttribute="leading" id="UlL-rT-Oei"/>
+                                    <constraint firstItem="lo5-A5-3F9" firstAttribute="centerY" secondItem="k7d-sq-qVM" secondAttribute="centerY" id="cv4-Ul-nxC"/>
+                                    <constraint firstItem="bhv-Qo-3Sc" firstAttribute="top" secondItem="k7d-sq-qVM" secondAttribute="top" id="njo-Gd-gv9"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5zv-J8-pHZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="k7d-sq-qVM" firstAttribute="top" secondItem="5zv-J8-pHZ" secondAttribute="top" id="9RI-Ia-oZO"/>
+                            <constraint firstItem="k7d-sq-qVM" firstAttribute="leading" secondItem="5zv-J8-pHZ" secondAttribute="leading" id="A3i-pG-CeC"/>
+                            <constraint firstItem="5zv-J8-pHZ" firstAttribute="trailing" secondItem="k7d-sq-qVM" secondAttribute="trailing" id="apl-dZ-IUL"/>
+                            <constraint firstItem="5zv-J8-pHZ" firstAttribute="bottom" secondItem="k7d-sq-qVM" secondAttribute="bottom" id="nPU-Hr-Ogw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="yC3-kP-KhC"/>
+                    <connections>
+                        <outlet property="CommentsLabel" destination="o3S-QE-aeJ" id="KwR-j9-Cxm"/>
+                        <outlet property="UpLabel" destination="bhv-Qo-3Sc" id="fHM-C6-N05"/>
+                        <outlet property="titleText" destination="lo5-A5-3F9" id="m3n-q6-KC1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nAV-3t-6A1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="762" y="108"/>
+        </scene>
         <!--Table View Controller-->
         <scene sceneID="na4-pK-7OU">
             <objects>
@@ -207,6 +267,9 @@
         <image name="purple_background" width="917" height="833"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
