@@ -28,7 +28,7 @@ class MainViewController: UIViewController {
         ReditTableView.delegate = self
         
         
-       // fetchBlogData();
+        fetchBlogData();
         // Do any additional setup after loading the view.
     }
     
@@ -46,9 +46,9 @@ class MainViewController: UIViewController {
       // Setup the variable ReditBlog
         let url = "https://www.reddit.com/.json"
         // init af
-        var redditBlog = RedditBlog.init(kind: "", data: nil)
+        let redditBlog = RedditBlog.init(kind: "", data: nil)
                
-        let request = AF.request(url,encoding: URLEncoding.queryString).validate()
+        _ = AF.request(url,encoding: URLEncoding.queryString).validate()
             .responseJSON { (response) in
             print("this data",response)
 
@@ -57,7 +57,14 @@ class MainViewController: UIViewController {
                         case .success( _):
 
                         do {
-//                            let blogData = try newJSONDecoder().decode(RedditBlog.self, from: (response.data) )
+                            let a = try JSONSerialization.jsonObject(with: response.data!, options: [])
+                            _ =  response.data?.base64EncodedData()
+                          //  let blogData = try newJSONDecoder().decode(RedditBlog.self, from: (response.data!) )
+                            let jsonDataa = try JSONSerialization.data(withJSONObject: a, options: [])
+                            var _: Data = jsonDataa.base64EncodedData();
+                            _ = JSONDecoder();
+                            //  try decoder.decode(RedditBlog.self, from: a as! Data)
+                            _ = try newJSONDecoder().decode(RedditBlog.self, from: jsonDataa)
 
 
                         } catch let error as NSError {
@@ -113,7 +120,7 @@ extension MainViewController: UITableViewDelegate {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let blogVC = storyBoard.instantiateViewController(withIdentifier: "BlogDetails") as! BlogDetailViewController
         
-        blogVC.blogData = BlogDetailsData.init(ups: String(blog?.ups ?? 0) , votes: String(blog?.numComments ?? 0), thumbnail: blog?.thumbnail, title: blog?.title,details: blog?.author)
+        blogVC.blogData = BlogDetailsData.init(ups: String(blog?.ups ?? 0) , votes: String(blog?.numComments ?? 0), thumbnail: blog?.thumbnail, title: blog?.title, body: blog?.selftext,details: blog?.author)
         
         self.present(blogVC, animated: true, completion: nil)
        

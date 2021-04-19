@@ -83,7 +83,6 @@
 		71DCF2CC262D241600C6153D /* RedditTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditTableViewCell.swift; sourceTree = "<group>"; };
 		71DCF2D1262D3D6E00C6153D /* BlogDataAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogDataAdapter.swift; sourceTree = "<group>"; };
 		71DCF2DA262D529D00C6153D /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
-		71DCF2DF262D572200C6153D /* BlogExercise-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BlogExercise-Bridging-Header.h"; sourceTree = "<group>"; };
 		71DCF2E6262D586E00C6153D /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		71DCF2EB262D5B9E00C6153D /* BlogDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogDetailViewController.swift; sourceTree = "<group>"; };
 		9B052D68A9F8E8AC215797B7 /* Pods_BlogExercise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlogExercise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -228,7 +227,6 @@
 			isa = PBXGroup;
 			children = (
 				711A4E5D262CD6B500BEBF7F /* MainViewController.swift */,
-				71DCF2DF262D572200C6153D /* BlogExercise-Bridging-Header.h */,
 				71DCF2EB262D5B9E00C6153D /* BlogDetailViewController.swift */,
 			);
 			path = Controllers;

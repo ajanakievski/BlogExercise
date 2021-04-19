@@ -18,17 +18,19 @@ class BlogDataAdapter {
         self.comments = votes
         self.thumbnail = thumbnail
         self.title = title
+        
     }
 }
 class BlogDetailsData {
-    let ups,comments,thumbnail,title,details: String?
+    let ups,comments,thumbnail,title,body,details: String?
 
-    init(ups:String?,votes:String?,thumbnail:String?,title:String?, details:String?) {
+    init(ups:String?,votes:String?,thumbnail:String?,title:String?, body:String?, details:String?) {
         self.ups = ups
         self.comments = votes
         self.thumbnail = thumbnail
         self.title = title
         self.details = details
+        self.body = body
     }
     
 }
