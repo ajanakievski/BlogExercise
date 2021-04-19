@@ -22,7 +22,8 @@ import Foundation
 import Alamofire
 
 // MARK: - ReditBlog
-class RedditBlog: Codable {
+class RedditBlog: Decodable
+{
     let kind: String?
     let data: RedditBlogData?
 
@@ -42,7 +43,7 @@ class RedditBlog: Codable {
 //   }
 
 // MARK: - ReditBlogData
-class RedditBlogData: Codable {
+class RedditBlogData: Decodable {
     let modhash: String?
     let dist: Int?
     let children: [Child]?
@@ -68,7 +69,8 @@ class RedditBlogData: Codable {
 //   }
 
 // MARK: - Child
-class Child: Codable {
+class Child: Decodable
+{
     let kind: Kind?
     let data: ChildData?
 
@@ -88,7 +90,9 @@ class Child: Codable {
 //   }
 
 // MARK: - ChildData
+
 class ChildData: Codable {
+  
     let approvedAtUTC: JSONNull?
     let subreddit: Subreddit?
     let selftext, authorFullname: String?
