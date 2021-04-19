@@ -15,7 +15,10 @@ class BlogDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        UpLabel.text = blogData.title
+        UpLabel.text = blogData.ups
+        CommentsLabel.text = blogData.comments
+        titleText.text = blogData.title
+        
         // Do any additional setup after loading the view.
     }
     
