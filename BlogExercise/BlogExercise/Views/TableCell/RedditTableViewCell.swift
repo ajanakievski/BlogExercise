@@ -11,9 +11,10 @@ class RedditTableViewCell:UITableViewCell{
     
     @IBOutlet weak var blogImage: UIImageView!
     
-    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var upvotesLabel: UILabel!
     
+    @IBOutlet weak var title: UITextView!
     @IBOutlet weak var comentsLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -38,12 +39,12 @@ class RedditTableViewCell:UITableViewCell{
         let data = try? Data(contentsOf: url!)
         let defaultpicData:Data = (UIImage(named: "mappleLeaf")?.pngData())!
         blogImage.image =  UIImage(data: data ?? defaultpicData)
-//        self.titleTextView.text = campus.campusName
-//        let helper = Helper()
-//        var backgroundColorList = helper.getBackgroundList()
-//        backGroundImage.image = UIImage.init(named: backgroundColorList[campus.id])
-//        self.addressTextView.text = campus.address
-//        self.campusBackroundImageView.image = campus.image
+
+        let helper = Helper()
+        var backgroundColorList = helper.getBackgroundList()
+        backgroundImage.image = UIImage.init(named: backgroundColorList[Int.random(in: 0..<5)])
+
+
         
     }
     
